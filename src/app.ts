@@ -3,11 +3,13 @@ import express, { Request, Response } from "express"
 // Create Express server
 const app = express();
 
-app.set("port", 3000)
+app.set("port", 3000);
+app.set("view engine", "ejs")
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('hello')
-})
+// controller
+import * as HomeController from "./controllers/home"
+
+app.get('/', HomeController.index)
 
 // listen
 app.listen(3000, () => {

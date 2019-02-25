@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "nodejs in action with typescript",
   "scripts": {
+    "server": "node dist/app.js",
+    "build-ts": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/iJinxin/node-start/issues"
   },
-  "homepage": "https://github.com/iJinxin/node-start#readme"
+  "homepage": "https://github.com/iJinxin/node-start#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.1"
+  }
 }
